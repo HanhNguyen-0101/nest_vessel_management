@@ -20,7 +20,7 @@ export class MdmVslCntrService {
 
     // const keyword = query.search || '';
     const [res, total] = await this.mdmVslCntrRepository.findAndCount({
-      take: itemPerPage,
+      take: query.page && query.item_per_page ? itemPerPage : null,
       skip,
     });
 
