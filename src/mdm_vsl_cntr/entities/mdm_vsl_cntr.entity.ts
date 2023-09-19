@@ -29,14 +29,23 @@ export class MdmVslCntr {
   vsl_locl_nm: string;
   @Column({
     nullable: true,
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
   })
   foil_capa: number;
   @Column({
     nullable: true,
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
   })
   doil_capa: number;
   @Column({
     nullable: true,
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
   })
   frsh_wtr_capa: number;
   @Column({
@@ -84,54 +93,93 @@ export class MdmVslCntr {
   })
   vsl_bldr_nm: string;
   @Column({
+    type: 'decimal',
+    precision: 7,
+    scale: 2,
     nullable: true,
   })
   loa_len: number;
   @Column({
+    type: 'decimal',
+    precision: 7,
+    scale: 2,
     nullable: true,
   })
   lbp_len: number;
   @Column({
+    type: 'decimal',
+    precision: 7,
+    scale: 2,
     nullable: true,
   })
   vsl_wdt: number;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 3,
     nullable: true,
   })
   vsl_dpth: number;
   @Column({
+    type: 'decimal',
+    precision: 8,
+    scale: 3,
     nullable: true,
   })
   smr_drft_hgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   dwt_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   lgt_shp_tong_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   grs_rgst_tong_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   net_rgst_tong_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   pnm_gt_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   pnm_net_tong_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   suz_gt_wgt: number;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   suz_net_tong_wgt: number;
@@ -144,6 +192,9 @@ export class MdmVslCntr {
   })
   mn_eng_tp_desc: string;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   mn_eng_bhp_pwr: number;
@@ -168,78 +219,135 @@ export class MdmVslCntr {
   })
   fdr_div_cd: string;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 3,
     nullable: true,
   })
   vsl_svc_spd: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 3,
     nullable: true,
   })
   max_spd: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 3,
     nullable: true,
   })
   ecn_spd: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 0,
     nullable: true,
   })
   crw_knt: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   cntr_dzn_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   cntr_op_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   cntr_pnm_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   cntr_vsl_clss_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 0,
     nullable: true,
   })
   rf_rcpt_knt: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 0,
     nullable: true,
   })
   rf_rcpt_max_knt: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   fbd_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   dpl_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 3,
     nullable: true,
   })
   blst_tnk_capa: number;
   @Column({
+    type: 'decimal',
+    precision: 8,
+    scale: 4,
     nullable: true,
   })
   foil_csm: number;
   @Column({
+    type: 'decimal',
+    precision: 8,
+    scale: 4,
     nullable: true,
   })
   doil_csm: number;
   @Column({
+    type: 'decimal',
+    precision: 8,
+    scale: 4,
     nullable: true,
   })
   frsh_wtr_csm: number;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   mn_eng_rpm_pwr: number;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   gnr_rpm_pwr: number;
   @Column({
+    type: 'decimal',
+    precision: 8,
+    scale: 3,
     nullable: true,
   })
   vsl_hgt: number;
@@ -280,6 +388,9 @@ export class MdmVslCntr {
   })
   gnr_tp_desc: string;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   gnr_bhp_pwr: number;
@@ -292,10 +403,16 @@ export class MdmVslCntr {
   })
   bwthst_tp_desc: string;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   bwthst_bhp_pwr: number;
   @Column({
+    type: 'decimal',
+    precision: 6,
+    scale: 0,
     nullable: true,
   })
   bwthst_rpm_pwr: number;
@@ -320,14 +437,23 @@ export class MdmVslCntr {
   })
   vsl_hl_no: string;
   @Column({
+    type: 'decimal',
+    precision: 18,
+    scale: 5,
     nullable: true,
   })
   ttl_teu_knt: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 0,
     nullable: true,
   })
   vsl_htch_knt: number;
   @Column({
+    type: 'decimal',
+    precision: 5,
+    scale: 0,
     nullable: true,
   })
   vsl_hld_knt: number;
@@ -340,6 +466,9 @@ export class MdmVslCntr {
   })
   intl_tong_certi_flg: string;
   @Column({
+    type: 'decimal',
+    precision: 9,
+    scale: 3,
     nullable: true,
   })
   madn_voy_suz_net_tong_wgt: number;
