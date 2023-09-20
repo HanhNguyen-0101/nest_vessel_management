@@ -19,8 +19,8 @@ export class MdmVslCntrController {
   }
 
   @MessagePattern(`${mdmVslCntr}.${getOneById}`)
-  async findOne(@Payload() vsl_cd: string) {
-    return await this.mdmVslCntrService.findOne(vsl_cd);
+  async findOne(@Payload() id: string) {
+    return await this.mdmVslCntrService.findOne(id);
   }
 
   @MessagePattern(`${mdmVslCntr}.${create}`)
@@ -32,16 +32,16 @@ export class MdmVslCntrController {
   async update(
     @Payload()
     updateData: {
-      vsl_cd: string;
+      id: string;
       updateMdmVslCntrDto: UpdateMdmVslCntrDto;
     },
   ) {
-    const { vsl_cd, updateMdmVslCntrDto } = updateData;
-    return await this.mdmVslCntrService.update(vsl_cd, updateMdmVslCntrDto);
+    const { id, updateMdmVslCntrDto } = updateData;
+    return await this.mdmVslCntrService.update(id, updateMdmVslCntrDto);
   }
 
   @MessagePattern(`${mdmVslCntr}.${remove}`)
-  async delete(@Payload() vsl_cd: string) {
-    return await this.mdmVslCntrService.delete(vsl_cd);
+  async delete(@Payload() id: string) {
+    return await this.mdmVslCntrService.delete(id);
   }
 }

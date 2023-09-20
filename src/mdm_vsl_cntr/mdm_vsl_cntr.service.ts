@@ -37,9 +37,9 @@ export class MdmVslCntrService {
     };
   }
 
-  async findOne(vsl_cd: string): Promise<MdmVslCntr> {
+  async findOne(id: string): Promise<MdmVslCntr> {
     return await this.mdmVslCntrRepository.findOne({
-      where: { vsl_cd },
+      where: { id },
     });
   }
 
@@ -48,15 +48,15 @@ export class MdmVslCntrService {
   }
 
   async update(
-    vsl_cd: string,
+    id: string,
     updateMdmVslCntrDto: UpdateMdmVslCntrDto,
   ): Promise<MdmVslCntr> {
-    await this.mdmVslCntrRepository.update(vsl_cd, updateMdmVslCntrDto);
-    return await this.mdmVslCntrRepository.findOne({ where: { vsl_cd } });
+    await this.mdmVslCntrRepository.update(id, updateMdmVslCntrDto);
+    return await this.mdmVslCntrRepository.findOne({ where: { id } });
   }
 
-  async delete(vsl_cd: string): Promise<string> {
-    await this.mdmVslCntrRepository.delete(vsl_cd);
-    return `Deleted vsl_cd=${vsl_cd} successfully!`;
+  async delete(id: string): Promise<string> {
+    await this.mdmVslCntrRepository.delete(id);
+    return `Deleted id=${id} successfully!`;
   }
 }
