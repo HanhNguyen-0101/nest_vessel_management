@@ -15,6 +15,7 @@ export const requestPatterns = {
     getOneById: 'get_item',
     getOneByEmail: 'get_item_by_email',
     getOneByName: 'get_item_by_name',
+    getOneByVslCd: 'get_item_by_vsl_cd',
     create: 'create',
     update: 'update',
     remove: 'remove',

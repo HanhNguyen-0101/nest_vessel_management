@@ -8,7 +8,7 @@ import { UpdateMdmVslCntrDto } from './dto/update-mdm_vsl_cntr.dto';
 
 const { tables, requests } = requestPatterns;
 const { mdmVslCntr } = tables;
-const { getAll, getOneById, update, create, remove } = requests;
+const { getAll, getOneById, update, create, remove, getOneByVslCd } = requests;
 @Controller()
 export class MdmVslCntrController {
   constructor(private readonly mdmVslCntrService: MdmVslCntrService) {}
@@ -21,6 +21,11 @@ export class MdmVslCntrController {
   @MessagePattern(`${mdmVslCntr}.${getOneById}`)
   async findOne(@Payload() id: string) {
     return await this.mdmVslCntrService.findOne(id);
+  }
+
+  @MessagePattern(`${mdmVslCntr}.${getOneByVslCd}`)
+  async findOneByVslCd(@Payload() vsl_cd: string) {
+    return await this.mdmVslCntrService.findOneByVslCd(vsl_cd);
   }
 
   @MessagePattern(`${mdmVslCntr}.${create}`)
