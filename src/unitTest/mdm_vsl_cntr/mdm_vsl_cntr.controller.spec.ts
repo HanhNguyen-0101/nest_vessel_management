@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MdmVslCntrController } from './mdm_vsl_cntr.controller';
-import { MdmVslCntrService } from './mdm_vsl_cntr.service';
+import { MdmVslCntrController } from '../../controllers/mdm_vsl_cntr.controller';
+import { MdmVslCntrService } from '../../useCases/mdm_vsl_cntr.service';
 
 describe('MdmVslCntrController', () => {
   let controller: MdmVslCntrController;

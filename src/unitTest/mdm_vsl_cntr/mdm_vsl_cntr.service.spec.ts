@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MdmVslCntrService } from './mdm_vsl_cntr.service';
+import { MdmVslCntrService } from '../../useCases/mdm_vsl_cntr.service';
 
 describe('MdmVslCntrService', () => {
   let service: MdmVslCntrService;

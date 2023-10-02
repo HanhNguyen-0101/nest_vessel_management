@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import typeorm from './config/typeorm';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MdmVslCntrModule } from './mdm_vsl_cntr/mdm_vsl_cntr.module';
-import { MdmVslCntr } from './mdm_vsl_cntr/entities/mdm_vsl_cntr.entity';
+import { AppController } from '../controllers/app.controller';
+import { MdmVslCntr } from '../core/entities/mdm_vsl_cntr.entity';
+import typeorm from '../frameworks/db/typeorm';
+import { AppService } from '../useCases/app.service';
+import { MdmVslCntrModule } from './mdm_vsl_cntr.module';
 
 @Module({
   imports: [

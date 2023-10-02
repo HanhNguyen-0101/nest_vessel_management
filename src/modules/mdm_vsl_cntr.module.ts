@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { MdmVslCntrService } from './mdm_vsl_cntr.service';
-import { MdmVslCntrController } from './mdm_vsl_cntr.controller';
+import { MdmVslCntrService } from '../useCases/mdm_vsl_cntr.service';
+import { MdmVslCntrController } from '../controllers/mdm_vsl_cntr.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MdmVslCntr } from './entities/mdm_vsl_cntr.entity';
+import { MdmVslCntr } from '../core/entities/mdm_vsl_cntr.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([MdmVslCntr])],
