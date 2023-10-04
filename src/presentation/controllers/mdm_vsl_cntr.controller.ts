@@ -6,7 +6,7 @@ import {
   CreateMdmVslCntrDto,
   FilterMdmVslCntrDto,
   UpdateMdmVslCntrDto,
-} from '../view-models/models/mdmVslCntr';
+} from '../models/mdmVslCntr';
 
 const { tables, requests } = requestPatterns;
 const { mdmVslCntr } = tables;

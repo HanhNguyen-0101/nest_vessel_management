@@ -7,7 +7,7 @@ import {
   FilterMdmVslCntrDto,
   GetAllMdmVslCntrDto,
   UpdateMdmVslCntrDto,
-} from '../../presentation/view-models/models/mdmVslCntr';
+} from '../../presentation/models/mdmVslCntr';
 
 @Injectable()
 export class MdmVslCntrService {

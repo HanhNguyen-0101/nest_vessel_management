@@ -1,4 +1,4 @@
-import { MdmVslCntr } from '../../../../infrastructure/database/entities';
+import { MdmVslCntr } from '../../../infrastructure/database/entities';
 
 export class GetAllMdmVslCntrDto {
   readonly data: Array<MdmVslCntr>;
