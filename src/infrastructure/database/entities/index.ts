@@ -1,0 +1,1 @@
+export * from './mdm_vsl_cntr.entity'

@@ -1,10 +1,12 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { MdmVslCntrService } from '../useCases/mdm_vsl_cntr.service';
-import { requestPatterns } from 'src/utils/constants';
-import { FilterMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/filter-mdm_vsl_cntr.dto';
-import { CreateMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/create-mdm_vsl_cntr.dto';
-import { UpdateMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/update-mdm_vsl_cntr.dto';
+import { MdmVslCntrService } from '../../application/use-cases/mdm_vsl_cntr.service';
+import { requestPatterns } from '../../utils/constants';
+import {
+  CreateMdmVslCntrDto,
+  FilterMdmVslCntrDto,
+  UpdateMdmVslCntrDto,
+} from '../view-models/mdmVslCntr';
 
 const { tables, requests } = requestPatterns;
 const { mdmVslCntr } = tables;

@@ -1,10 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { FilterMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/filter-mdm_vsl_cntr.dto';
 import { InjectRepository } from '@nestjs/typeorm';
-import { MdmVslCntr } from '../core/entities/mdm_vsl_cntr.entity';
 import { ILike, Repository } from 'typeorm';
-import { CreateMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/create-mdm_vsl_cntr.dto';
-import { UpdateMdmVslCntrDto } from '../core/dtos/mdmVslCntrDto/update-mdm_vsl_cntr.dto';
+import {
+  CreateMdmVslCntrDto,
+  FilterMdmVslCntrDto,
+  UpdateMdmVslCntrDto,
+} from '../../presentation/view-models/mdmVslCntr';
+import { MdmVslCntr } from '../../infrastructure/database/entities';
 
 @Injectable()
 export class MdmVslCntrService {
