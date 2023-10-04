@@ -1,1 +1,1 @@
-export * from './mdm_vsl_cntr.entity'
+export * from './mdm-vsl-cntr.entity'

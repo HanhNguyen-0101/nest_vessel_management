@@ -1,12 +1,8 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
-import { MdmVslCntrService } from '../../application/use-cases/mdm_vsl_cntr.service';
+import { MdmVslCntrService } from '../../application/use-cases/mdm-vsl-cntr.service';
 import { requestPatterns } from '../../utils/constants';
-import {
-  CreateMdmVslCntrDto,
-  FilterMdmVslCntrDto,
-  UpdateMdmVslCntrDto,
-} from '../models/mdmVslCntr';
+import { IFilterMdmVslCntr, IMdmVslCntrModel } from '../models';
 
 const { tables, requests } = requestPatterns;
 const { mdmVslCntr } = tables;
@@ -16,7 +12,7 @@ export class MdmVslCntrController {
   constructor(private readonly mdmVslCntrService: MdmVslCntrService) {}
 
   @MessagePattern(`${mdmVslCntr}.${getAll}`)
-  async findAll(@Payload() query: FilterMdmVslCntrDto) {
+  async findAll(@Payload() query: IFilterMdmVslCntr) {
     return await this.mdmVslCntrService.findAll(query);
   }
 
@@ -31,7 +27,7 @@ export class MdmVslCntrController {
   }
 
   @MessagePattern(`${mdmVslCntr}.${create}`)
-  async create(@Payload() createMdmVslCntrDto: CreateMdmVslCntrDto) {
+  async create(@Payload() createMdmVslCntrDto: IMdmVslCntrModel) {
     return await this.mdmVslCntrService.create(createMdmVslCntrDto);
   }
 
@@ -40,7 +36,7 @@ export class MdmVslCntrController {
     @Payload()
     updateData: {
       id: string;
-      updateMdmVslCntrDto: UpdateMdmVslCntrDto;
+      updateMdmVslCntrDto: IMdmVslCntrModel;
     },
   ) {
     const { id, updateMdmVslCntrDto } = updateData;

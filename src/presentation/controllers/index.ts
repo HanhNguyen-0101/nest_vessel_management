@@ -1,1 +1,1 @@
-export * from './mdm_vsl_cntr.controller';
+export * from './mdm-vsl-cntr.controller';

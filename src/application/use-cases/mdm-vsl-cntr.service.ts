@@ -3,11 +3,10 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { ILike, Repository } from 'typeorm';
 import { MdmVslCntr } from '../../infrastructure/database/entities';
 import {
-  CreateMdmVslCntrDto,
-  FilterMdmVslCntrDto,
-  GetAllMdmVslCntrDto,
-  UpdateMdmVslCntrDto,
-} from '../../presentation/models/mdmVslCntr';
+  IFilterMdmVslCntr,
+  IGetAllMdmVslCntr,
+  IMdmVslCntrModel,
+} from '../../presentation/models';
 
 @Injectable()
 export class MdmVslCntrService {
@@ -16,7 +15,7 @@ export class MdmVslCntrService {
     private mdmVslCntrRepository: Repository<MdmVslCntr>,
   ) {}
 
-  async findAll(query: FilterMdmVslCntrDto): Promise<GetAllMdmVslCntrDto> {
+  async findAll(query: IFilterMdmVslCntr): Promise<IGetAllMdmVslCntr> {
     const page = query && query.page ? Number(query.page) : 1;
     const itemPerPage =
       query && query.item_per_page ? Number(query.item_per_page) : 10;
@@ -52,13 +51,13 @@ export class MdmVslCntrService {
     return await this.mdmVslCntrRepository.findOneBy({ vsl_cd });
   }
 
-  async create(createMdmVslCntrDto: CreateMdmVslCntrDto): Promise<MdmVslCntr> {
+  async create(createMdmVslCntrDto: IMdmVslCntrModel): Promise<MdmVslCntr> {
     return await this.mdmVslCntrRepository.save(createMdmVslCntrDto);
   }
 
   async update(
     id: string,
-    updateMdmVslCntrDto: UpdateMdmVslCntrDto,
+    updateMdmVslCntrDto: IMdmVslCntrModel,
   ): Promise<MdmVslCntr> {
     await this.mdmVslCntrRepository.update(id, updateMdmVslCntrDto);
     return await this.mdmVslCntrRepository.findOne({ where: { id } });

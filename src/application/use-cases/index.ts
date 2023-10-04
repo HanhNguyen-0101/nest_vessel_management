@@ -1,1 +1,1 @@
-export * from './mdm_vsl_cntr.service';
+export * from './mdm-vsl-cntr.service';

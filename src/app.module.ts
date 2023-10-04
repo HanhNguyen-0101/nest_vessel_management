@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { MdmVslCntr } from './infrastructure/database/entities/mdm_vsl_cntr.entity';
+import { MdmVslCntr } from './infrastructure/database/entities/mdm-vsl-cntr.entity';
 import typeorm from './infrastructure/database/configDB/typeorm';
-import { MdmVslCntrModule } from './infrastructure/modules/mdm_vsl_cntr.module';
+import { MdmVslCntrModule } from './infrastructure/modules/mdm-vsl-cntr.module';
 
 @Module({
   imports: [
