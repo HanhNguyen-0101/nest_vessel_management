@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ILike, Repository } from 'typeorm';
+import { MdmVslCntr } from '../../infrastructure/database/entities';
 import {
   CreateMdmVslCntrDto,
   FilterMdmVslCntrDto,
+  GetAllMdmVslCntrDto,
   UpdateMdmVslCntrDto,
-} from '../../presentation/view-models/mdmVslCntr';
-import { MdmVslCntr } from '../../infrastructure/database/entities';
+} from '../../presentation/view-models/models/mdmVslCntr';
 
 @Injectable()
 export class MdmVslCntrService {
@@ -15,7 +16,7 @@ export class MdmVslCntrService {
     private mdmVslCntrRepository: Repository<MdmVslCntr>,
   ) {}
 
-  async findAll(query: FilterMdmVslCntrDto): Promise<any> {
+  async findAll(query: FilterMdmVslCntrDto): Promise<GetAllMdmVslCntrDto> {
     const page = query && query.page ? Number(query.page) : 1;
     const itemPerPage =
       query && query.item_per_page ? Number(query.item_per_page) : 10;
